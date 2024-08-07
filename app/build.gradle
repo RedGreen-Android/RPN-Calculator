@@ -1,0 +1,78 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    namespace 'com.example.rpn_calculator'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.rpn_calculator"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures {
+        dataBinding true
+        viewBinding true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    kapt {
+        correctErrorTypes true
+    }
+}
+
+dependencies {
+
+    implementation libs.androidx.core.ktx.v1120
+    implementation libs.androidx.appcompat.v161
+    implementation libs.material.v190
+    implementation libs.androidx.constraintlayout
+
+    //Local Unit Test
+    androidTestImplementation libs.androidx.junit.v115
+    androidTestImplementation libs.androidx.espresso.core.v351
+    implementation libs.androidx.core
+    testImplementation libs.junit
+    testImplementation libs.androidx.core.testing
+    testImplementation libs.kotlinx.coroutines.test
+    testImplementation libs.mockito.core
+
+    //Hilt
+    implementation "com.google.dagger:hilt-android:2.44.2"
+    kapt "com.google.dagger:hilt-compiler:2.44"
+
+    //Lifecycle
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.6.2"
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.2'
+
+    //Kotlin Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.6.2"
+
+    implementation "androidx.activity:activity-ktx:1.7.2"
+    implementation "androidx.fragment:fragment-ktx:1.6.1"
+}

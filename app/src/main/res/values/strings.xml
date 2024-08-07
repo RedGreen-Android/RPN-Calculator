@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RPN_Calculator</string>
+    <string name="enter_number_or_operator">Enter number or operator</string>
+    <string name="calculate">CALCULATE</string>
+</resources>
