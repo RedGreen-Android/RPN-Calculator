@@ -9,11 +9,11 @@
 
 Performs various operation, arithmetic, error and handling quit functionalities. 
 
--The calculator uses standard input and standard output
+-The calculator uses User Input, button and Output textview. Toast msg invalid input
 
--implement the four standard arithmetic operators, expand to more
+-implement the four standard arithmetic operators " +, -, *, / " expand to more
 
--Exit when it receives a "q" command as CLI mimic, handles errors and recover gracefully
+-Exit when it receives a "q" command as CLI mimic (app terminates), handles errors and recover gracefully
 
 ### Example: INPUT/OUTPUT 
 
