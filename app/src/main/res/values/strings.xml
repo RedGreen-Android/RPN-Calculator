@@ -2,4 +2,14 @@
     <string name="app_name">RPN_Calculator</string>
     <string name="enter_number_or_operator">Enter number or operator</string>
     <string name="calculate">CALCULATE</string>
+
+    <string name="operation_add">+</string>
+    <string name="operation_subtract">-</string>
+    <string name="operation_multiply">*</string>
+    <string name="operation_divide">/</string>
+    <string name="operation_quit">q</string>
+    <string name="error_invalid_operation">Error: Invalid operation</string>
+    <string name="calculator_exiting">Calculator exiting...</string>
+    <string name="error_insufficient_operands">Insufficient operands</string>
+    <string name="error_invalid_input">Invalid input</string>
 </resources>

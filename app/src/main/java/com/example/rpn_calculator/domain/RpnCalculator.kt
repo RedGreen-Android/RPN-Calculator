@@ -1,7 +1,11 @@
 package com.example.rpn_calculator.domain
 
+import android.content.Context
+import com.example.rpn_calculator.R
 import com.example.rpn_calculator.domain.model.Operation
 import com.example.rpn_calculator.domain.model.CalculatorState
+import dagger.hilt.android.qualifiers.ApplicationContext
+import javax.inject.Inject
 
 /**
  * `RpnCalculator` class implements Reverse Polish Notation (RPN) calculator.
@@ -20,7 +24,9 @@ import com.example.rpn_calculator.domain.model.CalculatorState
  * - The stack is used to hold operands and intermediate results.
  * - Commands are executed in the order they are received.
  */
-class RpnCalculator {
+class RpnCalculator @Inject constructor(
+    @ApplicationContext private val context: Context
+) {
     private var _state = CalculatorState()
     val state: CalculatorState
         get() = _state
@@ -38,9 +44,9 @@ class RpnCalculator {
             is Operation.Divide -> performOperation { a, b -> a / b }
             is Operation.Quit -> {
                _state = _state.copy(shouldQuit = true)
-                "Calculator exiting..."
+                context.getString(R.string.calculator_exiting)
             }
-            is Operation.Error -> "Invalid operation"
+            is Operation.Error -> context.getString(R.string.error_invalid_operation)
         }
     }
 
@@ -52,7 +58,7 @@ class RpnCalculator {
             _state = _state.copy(stack = _state.stack.dropLast(2) + result)
             result.toString()
         } else {
-            "Insufficient operands"
+            context.getString(R.string.error_insufficient_operands)
         }
     }
 }

@@ -1,5 +1,6 @@
 package com.example.rpn_calculator.di
 
+import android.content.Context
 import com.example.rpn_calculator.data.CalculatorRepositoryImpl
 import com.example.rpn_calculator.domain.CalculateUseCase
 import com.example.rpn_calculator.domain.RpnCalculator
@@ -8,6 +9,7 @@ import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
@@ -16,14 +18,17 @@ import javax.inject.Singleton
 object AppModule {
     @Provides
     @Singleton
-    fun provideRpnCalculator(): RpnCalculator {
-        return RpnCalculator()
+    fun provideRpnCalculator(@ApplicationContext context: Context): RpnCalculator {
+        return RpnCalculator(context)
     }
 
     @Provides
     @Singleton
-    fun provideCalculatorRepository(rpnCalculator: RpnCalculator): CalculatorRepository {
-        return CalculatorRepositoryImpl(rpnCalculator)
+    fun provideCalculatorRepository(
+        rpnCalculator: RpnCalculator,
+        @ApplicationContext context: Context
+    ): CalculatorRepository {
+        return CalculatorRepositoryImpl(rpnCalculator, context)
     }
 
     @Provides
