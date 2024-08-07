@@ -1,5 +1,9 @@
-# RPN Calculator App 
+# RPN (Reverse polish notation) Calculator 
 ### 
-### Productive level following Repository pattern MVVM architecture with lot of abstraction
-## Tech stack - Kotlin, MVVM viewmodel, Live Data, HILT for dependency Injection, databinding, viewbinding, Coroutines, Retrofit, States/Error states, styles refactored  
-Author: Ridwan Fahim
+## Tech stack - Clean architecture MVVM, use cases, domain/data/ui layer, Test cases, Hilt DI, Coroutine async, Flows, States, live data, Error handling, viewbinding etc 
+(production level adhering to best practices and principles, abstract, loosely coupled, able to scale easily)
+
+Performs various operation, arithmetic, error and handling quit functionalities. 
+-The calculator uses standard input and standard output
+-implement the four standard arithmetic operators, expand to more
+-Exit when it receives a "q" command as CLI mimic, handles errors and recover gracefully
