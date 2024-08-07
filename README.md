@@ -8,11 +8,14 @@
 ![RPN_Calculator_app](https://github.com/user-attachments/assets/8a1f5499-1cc8-4800-8865-b5f3935d4773)
 
 Performs various operation, arithmetic, error and handling quit functionalities. 
+
 -The calculator uses standard input and standard output
+
 -implement the four standard arithmetic operators, expand to more
+
 -Exit when it receives a "q" command as CLI mimic, handles errors and recover gracefully
 
-Example: INPUT/OUTPUT 
+### Example: INPUT/OUTPUT 
 
 ![INPUTS](https://github.com/user-attachments/assets/8b08f36e-430e-4af2-a9fa-6b5383a80d8c)
 
