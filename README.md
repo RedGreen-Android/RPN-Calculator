@@ -14,9 +14,5 @@ Performs various operation, arithmetic, error and handling quit functionalities.
 
 Example: INPUT/OUTPUT 
 
-> 5 
-5
-> 8
-8
-> +
-13
+![INPUTS](https://github.com/user-attachments/assets/8b08f36e-430e-4af2-a9fa-6b5383a80d8c)
+
