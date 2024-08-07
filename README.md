@@ -13,6 +13,7 @@ Performs various operation, arithmetic, error and handling quit functionalities.
 -Exit when it receives a "q" command as CLI mimic, handles errors and recover gracefully
 
 Example: INPUT/OUTPUT 
+
 > 5 
 5
 > 8
