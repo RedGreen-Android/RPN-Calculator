@@ -18,4 +18,11 @@ Performs various operation, arithmetic, error and handling quit functionalities.
 ### Example: INPUT/OUTPUT 
 
 ![INPUTS](https://github.com/user-attachments/assets/8b08f36e-430e-4af2-a9fa-6b5383a80d8c)
+> 5
+9
+1 -
+> -
+8
+> /
+0.625
 
