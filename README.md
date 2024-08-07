@@ -1,6 +1,6 @@
 # RPN (Reverse polish notation) Calculator 
 ### 
-## Tech stack - Clean architecture MVVM, use cases, domain/data/ui layer, Test cases, Hilt DI, Coroutine async, Flows, States, live data, Error handling, viewbinding etc 
+## Tech stack - Clean architecture MVVM, use cases, domain/data/ui layer, Test cases, Documented API, Hilt DI, Coroutine async, Flows, States, live data, Error handling, viewbinding etc 
 (production level adhering to best practices and principles, abstract, loosely coupled, able to scale easily)
 
 Performs various operation, arithmetic, error and handling quit functionalities. 
